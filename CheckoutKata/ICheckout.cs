@@ -8,7 +8,8 @@ namespace CheckoutKata
 {
     public interface ICheckout
     {
-        public void Scan(Item item);
+        public void Scan(string sku);
         public decimal Total();
+        public void Empty();
     }
 }
