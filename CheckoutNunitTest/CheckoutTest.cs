@@ -12,9 +12,9 @@ namespace CheckoutNunitTest
         {
             IEnumerable<Item> catalog = new[]
            {
-                new Item{SKU = "A99", Price = 0.50},
-                new Item{SKU = "B15", Price = 0.30},
-                new Item{SKU = "C40", Price = 0.60},
+                new Item{SKU = "A99", Price = 0.50m},
+                new Item{SKU = "B15", Price = 0.30m},
+                new Item{SKU = "C40", Price = 0.60m},
             };
 
             till = new Checkout(catalog);

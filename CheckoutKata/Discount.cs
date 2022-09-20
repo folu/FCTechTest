@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CheckoutKata
 {
-    public class Item
+    public class Discount 
     {
         public string SKU { get; set; }
-        public decimal Price { get; set; }
-
+        public int Quantity { get; set; }
+        public decimal Value { get; set; }
     }
 }
