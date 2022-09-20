@@ -11,8 +11,8 @@ IEnumerable<Item> catalog = new[]
 };
 IEnumerable<Discount> discounts = new[]
 {
-   new Discount{SKU = "A99", Quantity = 3, Value = 1.30m},
-   new Discount{SKU = "B15", Quantity = 2, Value = 0.45m}
+   new Discount{SKU = "A99", Quantity = 3, OfferPrice = 1.30m},
+   new Discount{SKU = "B15", Quantity = 2, OfferPrice = 0.45m}
 };
 
 till = new Checkout(catalog, discounts);

@@ -49,7 +49,7 @@ namespace CheckoutKata
             // items will be scanned, valided against catalogue before adding to basket
             if (!string.IsNullOrEmpty(sku))
             {
-                var fullItem = catalog.SingleOrDefault(p => p.SKU == sku);
+                var fullItem = catalog.SingleOrDefault(p => p.SKU == sku.Trim().ToUpper());
                 if (fullItem != null)
                 {
                     basket.Add(fullItem);
@@ -65,7 +65,7 @@ namespace CheckoutKata
             {
                 decimal originalSinglePrice = basket.FirstOrDefault(item => item.SKU == discount.SKU).Price;
 
-                var offerPrice = (basketItemCount / discount.Quantity) * discount.Value;
+                var offerPrice = (basketItemCount / discount.Quantity) * discount.OfferPrice;
                 var discountResult = (originalSinglePrice * discount.Quantity) - offerPrice;
                 var result = (offerPrice > defaultDecimal) ? discountResult : offerPrice;
                 return result;
